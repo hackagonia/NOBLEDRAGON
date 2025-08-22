@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { HashForm } from './components/HashForm';
 import { HashOutput } from './components/HashOutput';
+
 import { FileEncryptor } from './components/FileEncryptor';
 import { Button } from './components/ui/button';
 
@@ -8,11 +9,13 @@ export default function App() {
   const [outputs, setOutputs] = useState<Record<string, string>>({});
   const [active, setActive] = useState<'hash' | 'encrypt'>('hash');
 
+
   const toggleTheme = () => {
     document.documentElement.classList.toggle('dark');
   };
 
   return (
+
     <div className="flex min-h-screen">
       <aside className="w-48 border-r p-2 space-y-2 bg-muted">
         <div className="font-bold px-2">Tools</div>
